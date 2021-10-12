@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  zenn:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ".:/workspace"
+    command: npx zenn preview
